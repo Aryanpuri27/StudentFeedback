@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Evaluation Form</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            border: 2px solid gray;
+            padding: 10px;
+            background: white;
+            box-shadow: 4px 4px 16px;
+            border-radius: 5px;
+        }
+
+        label {
+            /* display: block; */
+            /* margin-bottom: 8px; */
+        }
+
+
+        textarea {
+            width: 100%;
+            padding: 0px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            height: 165px;
+            margin: 10px;
+            border-radius: 4px;
+
+        }
+
+        button {
+            padding: 9px;
+            margin: 0px 16px 16px 14px;
+            width: 94%;
+
+            background-color: #6a64f1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .optionsdiv {
+            margin: 5px;
+            /* border: 2px solid red; */
+            /* max-width: 40%; */
+            padding: 18px 26px 18px 0px;
+            border-radius: 10px;
+        }
+
+        .optionsdiv:hover {
+            background-color: #e9ecef;
+
+        }
+
+        .commentdiv {
+            margin: 5px;
+            /* border: 2px solid red; */
+            /* max-width: 40%; */
+            padding: 26px 26px 26px 0px;
+            border-radius: 10px;
+
+        }
+
+        .commentdiv>label {
+            margin: 5px;
+        }
+
+        span {
+            margin: 10px;
+        }
+
+        h3 {
+            margin-top: 40px;
+        }
+
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 18px;
+            /* Set the width and height of the custom radio */
+            height: 18px;
+            border: 2px solid #c3c2e5;
+            /* Border color */
+            border-radius: 50%;
+            /* Make it round */
+            outline: none;
+            /* Remove the default focus outline */
+        }
+
+        /* Style the checked state of the radio */
+        input[type="radio"]:checked {
+            /* background-color: #3498db; */
+            border: 5px solid #6a64f1;
+            /* Background color when checked */
+        }
+
+        img {
+            width: -webkit-fill-available;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="title">
+
+        <h2>Teacher Evaluation Form</h2>
+    </div>
+
+    <form action="/end" method="post">
+        <img src="undraw_educator_re_ju47.svg" alt="" srcset="">
+
+        <label for="courses">Select a course:</label>
+        <select id="courses" name="courses">
+            <option value="cse111">CSE 111</option>
+            <option value="int108">INT 108</option>
+            <option value="phy111">PHY 111</option>
+            <option value="mht302">MHT 302</option>
+            <option value="cse326">CSE 326</option>
+        </select>
+
+        <h3>1. Communication:</h3>
+        <label>How effectively does the teacher communicate with students/parents?</label>
+        <div>
+            <div class="optionsdiv">
+                <input type="radio" id="communication-ve" name="communication" value="veryEffective" required>
+                <label for="communication-ve">Very Effective</label>
+            </div>
+
+            <div class="optionsdiv">
+                <input type="radio" id="communication-e" name="communication" value="effective" required>
+                <label for="communication-e">Effective</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="communication-n" name="communication" value="neutral" required>
+                <label for="communication-n">Neutral</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="communication-i" name="communication" value="ineffective" required>
+                <label for="communication-i">Ineffective</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="communication-vi" name="communication" value="veryIneffective" required>
+                <label for="communication-vi">Very Ineffective</label>
+            </div>
+        </div>
+        <div class="commentdiv">
+
+
+
+
+            Provide comments or examples:
+
+            <textarea id="communicationComments" name="communicationComments" rows="4"
+                placeholder="Enter comments or examples"></textarea>
+        </div>
+
+        <h3>2. Teaching Methods:</h3>
+        <label>How would you rate the teacher's ability to explain concepts and engage students?</label>
+        <div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-ex" name="teachingMethods" value="excellent" required>
+                <label for="teachingMethods-ex">Excellent</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-good" name="teachingMethods" value="good" required>
+                <label for="teachingMethods-good">Good</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-sat" name="teachingMethods" value="satisfactory" required>
+                <label for="teachingMethods-sat">Satisfactory</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-ni" name="teachingMethods" value="needsImprovement" required>
+                <label for="teachingMethods-ni">Needs Improvement</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-uni" name="teachingMethods" value="unsatisfactory" required>
+                <label for="teachingMethods-uni">Unsatisfactory</label>
+            </div>
+        </div>
+
+        <div class="commentdiv">
+
+            <label for="teachingMethodsComments">Provide comments or examples:</label>
+            <textarea id="teachingMethodsComments" name="teachingMethodsComments" rows="4"
+                placeholder="Enter comments or examples"></textarea>
+        </div>
+        <!-- jksndfkjsandfkjnasdskfnaslkfndlkasmndlkasmdlk -->
+        <h3>3. Classroom Management:</h3>
+        <label>How well does the teacher manage the classroom environment?</label>
+        <div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-ex" name="teachingMethods" value="excellent" required>
+                <label for="teachingMethods-ex">Excellent</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-good" name="teachingMethods" value="good" required>
+                <label for="teachingMethods-good">Good</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-sat" name="teachingMethods" value="satisfactory" required>
+                <label for="teachingMethods-sat">Satisfactory</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-ni" name="teachingMethods" value="needsImprovement" required>
+                <label for="teachingMethods-ni">Needs Improvement</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="teachingMethods-uni" name="teachingMethods" value="unsatisfactory" required>
+                <label for="teachingMethods-uni">Unsatisfactory</label>
+            </div>
+        </div>
+        <div class="commentdiv">
+
+
+            <label for="classRoomManagementComments">Provide comments or examples:</label>
+            <textarea id="classRoomManagementComments" name="classRoomManagementComments" rows="4"
+                placeholder="Enter comments or examples"></textarea>
+        </div>
+        <!-- weffdqwdqwdwqdqwqwdqw -->
+        <h3>4. Availability and Support:</h3>
+        <label>How accessible is the teacher for additional help or clarification?</label>
+        <div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="availabilitySupport-ex" name="availabilitySupport" value="excellent" required>
+                <label for="availabilitySupport-ex"> Very Accessible</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="availabilitySupport-good" name="availabilitySupport" value="good" required>
+                <label for="availabilitySupport-good">Accessible</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="availabilitySupport-sat" name="availabilitySupport" value="satisfactory"
+                    required>
+                <label for="availabilitySupport-sat">Neutral</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="availabilitySupport-ni" name="availabilitySupport" value="needsImprovement"
+                    required>
+                <label for="availabilitySupport-ni">Inaccessible</label>
+            </div>
+
+            <div class="optionsdiv">
+
+                <input type="radio" id="availabilitySupport-uni" name="availabilitySupport" value="unsatisfactory"
+                    required>
+                <label for="availabilitySupport-uni"> Very Inaccessible</label>
+            </div>
+        </div>
+        <div class="commentdiv">
+
+
+            <label for="availabilitySupportComments">Provide comments or examples:</label>
+            <textarea id="availabilitySupportComments" name="availabilitySupportComments" rows="4"
+                placeholder="Enter comments or examples"></textarea>
+        </div>
+
+        <!-- Repeat similar structure for remaining sections -->
+
+        <h3>5. Additional Comments:</h3>
+        <div class="commentdiv">
+
+            <label for="additionalComments">Provide any additional comments or suggestions:</label>
+            <textarea id="additionalComments" name="additionalComments" rows="4"
+                placeholder="Enter additional comments or suggestions"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+    <script>
+
+        var parentDivs = document.getElementsByClassName('optiondiv');
+        document.body.addEventListener('click', function (event) {
+            if (event.target.classList.contains('optiondiv')) {
+                var inputElement = event.target.querySelector('input');
+                if (inputElement) {
+                    inputElement.focus();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
